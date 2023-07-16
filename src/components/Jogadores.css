@@ -1,0 +1,135 @@
+.jogadores-nomes {
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  background-color: whitesmoke;
+  border-radius: 1em;
+  border: solid 0.1em silver;
+  width: 20%;
+  min-width: 25em;
+  font-family: "Roboto Condensed", sans-serif;
+  padding-top: 1em;
+  padding-bottom: 2em;
+  margin-top: 3%;
+}
+
+h1 {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.botao-confirmar,
+.botao-computar,
+.botao-finalizar {
+  backface-visibility: hidden;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  white-space: nowrap;
+  background: linear-gradient(180deg, #f9f9f9 0%, #e0e0e0 100%);
+  border-radius: 100px;
+  border: 0.5px solid rgba(0%, 0%, 0%, 0.2);
+  border-width: 0.5px 0.5px 0.5px 0.5px;
+  padding: 4px 22px 5px 22px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.6), 0px 0px 5px rgba(255, 255, 255, 1),
+    0px 1px 0px 3px rgba(0, 0, 0, 0.2), inset 0px 1px 0px rgba(255, 255, 255, 1);
+  color: #222;
+  font-size: 16px;
+  font-weight: 900;
+  font-style: normal;
+  margin-top: 1em;
+}
+
+.botao-finalizar {
+  background: linear-gradient(180deg, #e25050 0%, #b10000 100%);
+  color: white;
+}
+
+.esconde-jogadores,
+.esconde-lista,
+.escondes-lista-pontos,
+.esconder-ranking {
+  display: none;
+}
+
+.listagem-jogadores {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 1em;
+  width: auto;
+  min-width: 300px;
+  max-width: 250px;
+  background-color: rgba(241, 241, 241, 0.815);
+  border-radius: 1em;
+  box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.54);
+  border: none;
+  padding: 1em;
+
+  margin: auto;
+  margin-top: 15%;
+
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1.5em;
+  text-align: left;
+}
+
+.listagem-jogadores input {
+  width: 2.2em;
+  height: 1.1em;
+  text-align: left;
+  justify-content: center;
+  padding-left: 0.5em;
+  color: rgb(67, 75, 146);
+  font-size: 1.2em;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.rodada {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.confirmar-pontuacao,
+.finalizar {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.listagem-pontuacao {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 1em;
+  width: auto;
+  min-width: 200px;
+  max-width: 250px;
+  background-color: rgba(241, 241, 241, 0.815);
+  border-radius: 1em;
+  box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.54);
+  border: none;
+  padding: 1em;
+
+  margin: auto;
+  margin-top: 15%;
+
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1.5em;
+  text-align: left;
+}
+
+.resultado-pontos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
+/* min-width */
+@media screen and (max-width: 800px) {
+  .resultado-pontos {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 60%;
+  }
+}

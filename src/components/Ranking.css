@@ -1,0 +1,86 @@
+.ranking {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 0.4fr repeat(3, 1fr);
+  row-gap: 1em;
+  column-gap: 2em;
+  color: white;
+  font-family: "Roboto Condensed", sans-serif;
+  padding: 2vw; /* Altere para unidades de medida relativas */
+  width: 80%;
+  margin: auto;
+}
+
+/* Outras alterações de estilo responsivo aqui */
+
+.itens-resultado {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 0.5fr);
+
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+
+  background-color: rgba(255, 255, 255, 0.185);
+  border-radius: 0.5em;
+  -webkit-box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.54);
+  box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.54);
+  border: none;
+  padding: 1em;
+}
+
+.imagem-item {
+  min-height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.nome-jogador {
+  font-weight: bold;
+  font-size: 1.5em;
+  padding: 0.5em;
+}
+
+.pontos-jogador {
+  font-weight: bold;
+  font-size: 3em;
+
+  background-color: rgba(0, 0, 0, 0.678);
+  border-radius: 0.5em;
+  -webkit-box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.54);
+  box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.54);
+  border: none;
+}
+
+.botao-reiniciar {
+  backface-visibility: hidden;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  white-space: nowrap;
+  background: linear-gradient(180deg, #f9f9f9 0%, #e0e0e0 100%);
+  border-radius: 100px;
+  border: 0.5px solid rgba(0%, 0%, 0%, 0.2);
+  border-width: 0.5px 0.5px 0.5px 0.5px;
+  padding: 4px 22px 5px 22px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.6), 0px 0px 5px rgba(255, 255, 255, 1),
+    0px 1px 0px 3px rgba(0, 0, 0, 0.2), inset 0px 1px 0px rgba(255, 255, 255, 1);
+  color: #222;
+  font-size: 16px;
+  font-weight: 900;
+  font-style: normal;
+  margin-top: 1em;
+}
+
+.reiniciar-game {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  grid-column: 1 / span 4;
+}
