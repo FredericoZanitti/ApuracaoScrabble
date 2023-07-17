@@ -7,7 +7,8 @@
 }
 
 .jogadores input {
-  width: 10em;
+  width: 35vw;
+  max-width: 7em;
   height: 2em;
   text-align: left;
   justify-content: center;

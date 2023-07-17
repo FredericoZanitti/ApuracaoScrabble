@@ -3,12 +3,14 @@ import InputJogador from "./InputJogador";
 import "./Jogadores.css";
 
 import Ranking from "./Ranking";
+import Mensagem from "./Mensagem";
 
 export default function Jogadores() {
   const [valoresJogadores, setValoresJogadores] = useState({});
   const [rodada, setRodada] = useState(1);
   const [pontos, setPontos] = useState({});
   const [finalizar, setFinalizar] = useState(false);
+  const [mensagem, setMensagem] = useState("");
 
   function handleValorChange(index, novoValor) {
     if (novoValor && novoValor.trim() !== "") {
@@ -41,7 +43,9 @@ export default function Jogadores() {
 
   function escondeBoxJogadores() {
     if (Object.keys(valoresJogadores).length < 2) {
-      console.log("É preciso informar pelo menos dois jogadores!");
+      setMensagem(
+        "Para jogar Scrabble, é preciso informar pelo menos dois jogadores!"
+      );
     } else {
       const boxJogadores = document.getElementById("boxJog");
       boxJogadores.classList.add("esconde-jogadores");
@@ -85,6 +89,12 @@ export default function Jogadores() {
     listJogadores.classList.add("esconde-lista");
     const listPontos = document.getElementById("pontsJog");
     listPontos.classList.add("escondes-lista-pontos");
+
+    if (Object.entries(pontos).length === 0) {
+      setMensagem(
+        "Nenhum ponto foi computado, assim não há maneiras de identificar o vencedor!"
+      );
+    }
     setFinalizar(true);
   }
 
@@ -92,7 +102,7 @@ export default function Jogadores() {
     <div>
       <div className="jogadores-nomes" id="boxJog">
         <h1>Identificação dos Jogadores</h1>
-
+        {mensagem !== "" && <Mensagem msg={mensagem} />}
         <InputJogador
           identification={1}
           onValorChange={(valor) => handleValorChange(0, valor)}
@@ -161,6 +171,7 @@ export default function Jogadores() {
       <div className="esconder-ranking" id="ranking">
         <Ranking resultado={pontos} jogadores={valoresJogadores} />
       </div>
+      {mensagem !== "" && finalizar && <Mensagem msg={mensagem} />}
     </div>
   );
 }
